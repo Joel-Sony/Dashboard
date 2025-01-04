@@ -14,19 +14,36 @@
     font-family: ExposeRegular, monospace;
 }
 
-body {
-    height: 100vh;
-    background-image: url("./images/");
+html{
+    height:auto;
+    margin: 0; 
+    padding: 0;
+    width:100vw;
 }
 
-.logo img {
-    width: 10rem;
-}
 
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
+    max-width: 100vw; 
+    max-height: 110vh;
+}
+
+.main {
+    width: 104vw;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("./images/starBackground.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    transform: scale(0.8); 
+    transform-origin: top left; 
+    width: 100vw; 
+    overflow-x: hidden;
 }
 
 .sidebar {
@@ -56,9 +73,10 @@ body {
     align-items: center;
     margin-right: 10rem;
     >.profilePicture>img{
-        width:5rem;
-        border: solid 2px white ;
+        width:4rem;
+        border: solid 5px rgb(255, 255, 255) ;
         border-radius: 100%;
+        background-color: rgb(255, 1, 1);
     }
     >.profileName{
         font-size: larger;
@@ -66,23 +84,34 @@ body {
 }
 
 .headerBottom {
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
 }
 
 .requestCard {
-    width: 20rem;
-    height: 10rem;
+    width: 25rem;
+    height: 12rem;
     background-color: red;
     margin: 10px 0;
+    >p{
+        font-size:1.3rem;
+        font-weight:100;
+    }
 }
 
 .announceCard {
-    padding: 20px;
-    width: 14rem;
+    padding: 6px 30px;
+    width: 18rem;
     height: 7rem;
     background-color: khaki;
     margin: 10px 0;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    >u{
+        font-size:1.9rem;
+    }
 }
+
+
 
 .containerMain {
     display: grid;
@@ -111,13 +140,16 @@ body {
     grid-column: 1 / 3;
     font-size: 1.5rem;
     font-weight: 300;
+    font-size:3rem;
+    text-shadow: 4px 3px 0px #ab0f0f, 9px 8px 0px rgba(0,0,0,0.15);
 }
 
 .announcements {
     color: white;
-    grid-column: 3 / 4;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 300;
+    text-shadow: 4px 3px 0px #ab0f0f, 9px 8px 0px rgba(0,0,0,0.15);
+    paint-order: stroke fill;
 }
 
 .takeYourHeart {
@@ -193,17 +225,17 @@ body {
     }
 }
 
-
-.main{
-    background-image: url("./images/starBackground.png");
-    background-size: cover;
-    height: 90vhz;
-}
-
 .requestCard{
     border: solid 3px white;
     border-radius: 10px;
-    padding:20px 20px;
+    padding:20px 20px 15px 20px;
+    font-size: 1.1rem;
+}
+
+.requestCardHeading{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
 }
 
 .searchBox{
@@ -218,7 +250,7 @@ body {
     display: flex;
     gap:30px;
     margin-left: 2rem;
-    margin-top: 1rem;
+    padding-top: 0.6rem;
     align-items: center;
     >img{
         width:6rem;
@@ -226,7 +258,43 @@ body {
     }
 }
 
+.phantom>img{
+    width: 6rem;
+    border: solid 5px rgb(255, 255, 255) ;
+    border-radius: 100%;
+    background-color: rgb(255, 1, 1);
+}
+
+.headerBottom{
+    display:flex;
+    justify-content: space-between;
+    padding-right: 3rem;
+}
+
+.buttons{
+    display: flex;
+    gap:50px;
+}
+
+.left{
+    display:flex;
+    margin-left: 4rem;
+    >div>.hi{
+        font-size: 1.5rem;
+    }
+    >div>.joker{
+        font-size: 3rem;
+    }
+    >div{
+
+    }
+}
+
 .fa-solid{
     color: white;
 }
 
+.alarm{
+    margin-top:1rem;
+    margin-left:5rem;
+}
