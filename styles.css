@@ -91,12 +91,14 @@ body {
     width: 25rem;
     height: 12rem;
     background-color: red;
+    position:relative;
     margin: 10px 0;
     >p{
         font-size:1.3rem;
         font-weight:100;
     }
 }
+
 
 .announceCard {
     padding: 6px 30px;
@@ -206,7 +208,7 @@ body {
 .sidebarOptions,.sidebarOptions+ul{
    
     text-align: left;
-    padding-bottom:15px;
+    padding-bottom:20px;
     padding-left: 30px;
     list-style-type: none;
     font-size: 1.4rem;
@@ -215,12 +217,17 @@ body {
         background-color: black;
         padding: 5px;
         margin-top: 10px;
+        margin-bottom:20px;
         color: white;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
         border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
     >li:hover{
-        transform: translate(2px, 2px);
+        background-color: rgb(36, 29, 29);
+        border: solid 5px rgb(36, 29, 29)  ;
+        transform: scale(1.03);
         cursor: pointer;
     }
 }
@@ -269,25 +276,50 @@ body {
     display:flex;
     justify-content: space-between;
     padding-right: 3rem;
+    color:white;
+    align-items: center;
 }
 
 .buttons{
     display: flex;
     gap:50px;
+    >div{
+        background-color: red;
+        width:8rem;
+        height:2rem;
+        text-align: center;
+        line-height: 2rem;
+        border-radius: 2rem;
+        font-size: 1.7rem; 
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+}
+.buttons>div:hover {
+    background-color: #b81414; 
+    transform: scale(1.05); 
 }
 
 .left{
     display:flex;
-    margin-left: 4rem;
+    margin-left: 2.5rem;
+    margin-bottom: 0.4rem;
     >div>.hi{
         font-size: 1.5rem;
+        margin-left: 2rem;
     }
     >div>.joker{
-        font-size: 3rem;
+        margin-left:2rem;
+        font-size: 4rem;
+        color:white;
+        -webkit-text-fill-color: red;
+        -webkit-text-stroke: 2px;
     }
-    >div{
+}   
 
-    }
+.right{
+    padding-right:5rem;
 }
 
 .fa-solid{
@@ -297,4 +329,15 @@ body {
 .alarm{
     margin-top:1rem;
     margin-left:5rem;
+}
+
+.daggerImage {
+    position: absolute;
+    top: -160px;
+    right: -50px;
+    transform: translateY(100%);
+    filter: drop-shadow(10px 6px 5px rgb(0, 0, 0));
+    width: 100px; 
+    height: auto; 
+    z-index: 10; 
 }
