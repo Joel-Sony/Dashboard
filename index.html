@@ -14,6 +14,9 @@
         <div class="sidebar">
             <div class="logo">
                 <img src="images/logo.png" alt="Logo">
+                <div class="hamburger" id="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
             <ul class="sidebarOptions">
                 <li><i class="fa-solid fa-house"></i> <a href="https://megamitensei.fandom.com/wiki/Confidant">Home</a></li>
@@ -117,5 +120,15 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Close sidebar when a nav item is clicked on mobile
+        document.querySelectorAll('.sidebarOptions li, .sidebarOptions + ul li').forEach(function(li) {
+            li.addEventListener('click', function() {
+                if (window.innerWidth <= 767) {
+                    document.querySelector('.sidebar').classList.remove('open');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
